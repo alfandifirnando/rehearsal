@@ -28,26 +28,26 @@ Disini saya menggunakan dataset [KC_Housesales_Data](https://www.kaggle.com/swat
 Dataset terdiri dari harga rumah dari King County sebuah area di Negara Bagian Washington AS, data ini juga mencakup Seattle. Dataset diperoleh dari Kaggle. Data ini diterbitkan/dirilis di bawah CC0: Domain Publik. Dataset terdiri dari 21 variabel dan 21.613 observasi
 
 Variabel-variabel pada dataset tersebut adalah sebagai berikut:
-id : notasi untuk rumah
-date : tanggal Rumah tanggal dijual
-price : Harga adalah target prediksi
-bedrooms : Jumlah Kamar Tidur/Rumah
-bathrooms : Jumlah kamar mandi/kamar
-sqftliving : cuplikan persegi rumah
-floors : Total lantai (tingkat) di rumah
-waterfront : Rumah tepi laut yang memiliki pemandangan ke tepi laut
-view : Telah dilihat
-condition :  Seberapa baik kondisinya ( Secara Keseluruhan ). 1 menunjukkan properti usang dan 5 sangat baik
-grade : grade keseluruhan yang diberikan kepada unit perumahan, berdasarkan sistem penilaian King County. 1 buruk, 13 sangat baik.
-sqftabove : cuplikan persegi rumah terpisah dari ruang bawah tanah
-sqftbasement :  cuplikan persegi ruang bawah tanah
-yrbuilt : Tahun dibangun 
-yrrenovated: Tahun ketika rumah direnovasi
-zipcode : kode pos zip
-lat : Latitude koordinat
-long : Koordinat Bujur
-sqftliving15 : Area ruang tamu pada tahun 2015(menyiratkan-- beberapa renovasi) Ini mungkin atau mungkin tidak memengaruhi area loteng
-sqftlot15 : lotUkuran area pada 2015(menyiratkan-- beberapa renovasi)
+- id : notasi untuk rumah
+- date : tanggal Rumah tanggal dijual
+- price : Harga adalah target prediksi
+- bedrooms : Jumlah Kamar Tidur/Rumah
+- bathrooms : Jumlah kamar mandi/kamar
+- sqftliving : cuplikan persegi rumah
+- floors : Total lantai (tingkat) di rumah
+- waterfront : Rumah tepi laut yang memiliki pemandangan ke tepi laut
+- view : Telah dilihat
+- condition :  Seberapa baik kondisinya ( Secara Keseluruhan ). 1 menunjukkan properti usang dan 5 sangat baik
+- grade : grade keseluruhan yang diberikan kepada unit perumahan, berdasarkan sistem penilaian King County. 1 buruk, 13 sangat baik.
+- sqftabove : cuplikan persegi rumah terpisah dari ruang bawah tanah
+- sqftbasement :  cuplikan persegi ruang bawah tanah
+- yrbuilt : Tahun dibangun 
+- yrrenovated: Tahun ketika rumah direnovasi
+- zipcode : kode pos zip
+- lat : Latitude koordinat
+- long : Koordinat Bujur
+- sqftliving15 : Area ruang tamu pada tahun 2015(menyiratkan-- beberapa renovasi) Ini mungkin atau mungkin tidak memengaruhi area loteng
+- sqftlot15 : lotUkuran area pada 2015(menyiratkan-- beberapa renovasi)
 
 Exploratory Data Analysis : Menangani Outliers
 Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah 
