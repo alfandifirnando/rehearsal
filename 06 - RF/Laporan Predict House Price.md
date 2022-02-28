@@ -50,10 +50,15 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - sqftlot15 : lotUkuran area pada 2015(menyiratkan-- beberapa renovasi)
 
 Exploratory Data Analysis : Menangani Outliers
-Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah 
+
+Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah
+
 ![image](https://user-images.githubusercontent.com/50938896/156042655-cfac108b-d244-455d-aa62-52d5a275e23d.png)
+
 untuk menangani data outliers ini saya menggunakan solusi dengan metode IQR. disini saya akan menggunakan metode IQR untuk mengidentifikasi outlier yang berada di luar Q1 dan Q3
+
 ![image](https://user-images.githubusercontent.com/50938896/156042971-7d8319c7-e1f9-4a7e-a6d6-dabaf95a4914.png)
+
 Dapat terlihat data menjadi berkurang setelah melakukan penghapusan data outlier.
 
 Disini saya juga memvisualisasikan Correlation Matrix untuk Menyeleksi Fitur Numerik.
@@ -61,8 +66,11 @@ Disini saya juga memvisualisasikan Correlation Matrix untuk Menyeleksi Fitur Num
 ## Data Preparation
 
 Pada tahap ini saya membagi dataset menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20.
+
 Selanjutnya saya melakukan standarisasi membantu untuk membuat fitur data menjadi bentuk yang lebih mudah diolah oleh algoritma.
+
 ![image](https://user-images.githubusercontent.com/50938896/156043819-1ce59b06-387a-46bf-8448-c67a24757793.png)
+
 Standarisasi yang saya gunakan adalah StandardScaler. StandardScaler melakukan proses standarisasi fitur dengan mengurangkan mean (nilai rata-rata) kemudian membaginya dengan standar deviasi untuk menggeser distribusi.
 
 ## Modeling
@@ -76,9 +84,11 @@ Pada algoritma Random Forest saya menyetel hyperparameter n_estimators=50 dan ma
 Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau Mean Squared Error yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi.
 
 Hasil evaluasi pada data latih dan data test adalah sebagai berikut :
+
 ![image](https://user-images.githubusercontent.com/50938896/156045496-a263ea2d-ec07-4faa-99c1-9fc8fc062f5a.png)
 
 Saya juga melakukan visualiasi terhadap hasil evaluasi:
+
 ![image](https://user-images.githubusercontent.com/50938896/156045639-2f119dca-665b-4a36-8eda-494de2991603.png)
 
 Dari gambar di atas, terlihat bahwa, model Random Forest memberikan nilai eror yang paling kecil. Model random forest inilah yang akan kita pilih sebagai model terbaik untuk melakukan prediksi harga rumah
