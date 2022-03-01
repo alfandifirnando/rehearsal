@@ -29,7 +29,7 @@ Dataset terdiri dari harga rumah dari King County sebuah area di Negara Bagian W
 
 Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - id : notasi untuk rumah
-- date : tanggal Rumah tanggal dijual
+- date : tanggal Rumah dijual
 - price : Harga adalah target prediksi
 - bedrooms : Jumlah Kamar Tidur/Rumah
 - bathrooms : Jumlah kamar mandi/kamar
@@ -52,6 +52,12 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 ## Data Preparation
 
 Exploratory Data Analysis : 
+
+- Drop columns
+Diawal saya memutuskan untuk melakukan drop columns pada kolom "id" dan "date", karena menurut saya kedua feature ini tidak memberi informasi yang cukup penting untuk untuk melakukan analisa regresi linear. Feature "date" atau data tanggal penjualan rumah diambil dari tahun mei 2014 sampai mei 2015 sehingga perubahan waktu ini tidak akan berdampak signifikan terhadap prediksi harga rumah.
+
+![image](https://user-images.githubusercontent.com/50938896/156179844-783b1202-23f6-4693-9440-591b10ef68c2.png)
+
 - Menangani Outliers
 Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah
 
