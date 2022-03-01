@@ -53,12 +53,14 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 
 Exploratory Data Analysis : 
 
-- Drop columns
+- Drop columns :
+
 Diawal saya memutuskan untuk melakukan drop columns pada kolom "id" dan "date", karena menurut saya kedua feature ini tidak memberi informasi yang cukup penting untuk untuk melakukan analisa regresi linear. Feature "date" atau data tanggal penjualan rumah diambil dari tahun mei 2014 sampai mei 2015 sehingga perubahan waktu ini tidak akan berdampak signifikan terhadap prediksi harga rumah.
 
 ![image](https://user-images.githubusercontent.com/50938896/156179844-783b1202-23f6-4693-9440-591b10ef68c2.png)
 
-- Menangani Outliers
+- Menangani Outliers :
+
 Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah
 
 ![image](https://user-images.githubusercontent.com/50938896/156042655-cfac108b-d244-455d-aa62-52d5a275e23d.png)
@@ -69,7 +71,7 @@ untuk menangani data outliers ini saya menggunakan solusi dengan metode IQR. dis
 
 Dapat terlihat data menjadi berkurang setelah melakukan penghapusan data outlier.
 
-- Correlation Matrix
+- Correlation Matrix :
 
 Disini saya juga memvisualisasikan Correlation Matrix untuk Menyeleksi Fitur Numerik.
 
@@ -83,11 +85,11 @@ Oleh karena itu saya melakukan drop columns terhadap feature yang korelasinya le
 
 ![image](https://user-images.githubusercontent.com/50938896/156178411-bce53fdd-b3ad-42af-abe5-0888ff7de02c.png)
 
-- Train Test Split
+- Train Test Split :
 
 Pada tahap ini saya membagi dataset menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20.
 
-- Standarisasi
+- Standarisasi :
 
 Selanjutnya saya melakukan standarisasi membantu untuk membuat fitur data menjadi bentuk yang lebih mudah diolah oleh algoritma.
 
