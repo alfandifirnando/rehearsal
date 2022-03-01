@@ -111,10 +111,10 @@ Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau Mean Squared Err
 
 Hasil evaluasi pada data latih dan data test adalah sebagai berikut :
 
-![image](https://user-images.githubusercontent.com/50938896/156045496-a263ea2d-ec07-4faa-99c1-9fc8fc062f5a.png)
+![image](https://user-images.githubusercontent.com/50938896/156216244-082b218a-afbe-4260-98f4-f7bc2c4e1c61.png)
 
 Saya juga melakukan visualiasi terhadap hasil evaluasi:
 
-![image](https://user-images.githubusercontent.com/50938896/156045639-2f119dca-665b-4a36-8eda-494de2991603.png)
+![image](https://user-images.githubusercontent.com/50938896/156216301-f5e32d8a-3c59-4605-9ea8-8634ccc49484.png)
 
 Dari gambar di atas, terlihat bahwa, model Random Forest memberikan nilai eror yang paling kecil. Model random forest inilah yang akan kita pilih sebagai model terbaik untuk melakukan prediksi harga rumah
