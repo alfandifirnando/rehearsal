@@ -6,7 +6,7 @@ Memprediksi harga rumah
 
 Permasalahan dari penelitian kali ini adalah bagaimana melakukan prediksi terhadap harga rumah, dalam menentukan harga rumah tentu sangat banyak feature/ciri yang mempengaruhi harga rumah mulai dari faktor internal maupun faktor eksternal, sebagai contoh jumlah ruangan di sebuah rumah pasti akan sangat berpengaruh terhadap harganya, selain itu letak posisi rumah secara geografis juga sangat menentukan harganya, misal terletak di kawasan bisnis perkotaan atau tidak. Oleh karena itu sangat dibutuhkan penelitian dari berbagai disiplin ilmu pengetahuan untuk menyelesaikan permasalahan dalam melakukan prediksi terhadap harga rumah, dalam hal ini machine learning datang sebagai solusi untuk menjawab permasalahan tersebut. Caranya adalah dengan mengumpulkan data-data terkait dengan penentuan harga rumah, semakin banyak sampel tentu akan semakin besar peluang machine untuk bisa belajar lebih baik dari data yang ada dan melakukan prediksi dengan semakin baik.
 
-Referensi : Manasa J, Radha Gupta, "Machine Learning based Predicting House Prices using Regression Techniques"
+Referensi: [Machine Learning based Predicting House Prices using Regression Techniques](https://ieeexplore.ieee.org/abstract/document/9074952)
 
 ## Business Understanding
 
@@ -16,9 +16,9 @@ Problem Statements :
 3. Bagaimana teknik evaluasi untuk masalah prediksi harga rumah
 
 Goals :
-1. Menerapkan algoritma regresi pada machine learning seperti algoritma KNN dan Random Forest
-2. Melakukan Exploratory Data Analysis (EDA) untuk menyeleksi feature
-3. Menggunakan metrik evaluasi Mean Squared Error (MSE) untuk permasalahan regresi
+1. Untuk melakukan prediksi harga rumah menggunakan algoritma machine learning
+2. Untuk melakukan feature engineering pada dataset prediksi harga rumah
+3. Untuk menggunakan metrik evaluasi pada prediksi harga rumah
 
 Solution Statement : Hal pertama yang perlu diperhatikan ini adalah masalah regresi, jadi kita akan menggunakan algoritma regresi pada machine learning, solusinya kita bisa menggunakan algoritma regresi KNN dan Random Forest, untuk melakukan feature engineering kita bisa menggunakan teknik Exploratory Data Analysis (EDA), dan metrik evaluasi yang akan kita gunakan adalah Mean Squared Error (MSE)
 
@@ -49,8 +49,10 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - sqftliving15 : Area ruang tamu pada tahun 2015(menyiratkan-- beberapa renovasi) Ini mungkin atau mungkin tidak memengaruhi area loteng
 - sqftlot15 : lotUkuran area pada 2015(menyiratkan-- beberapa renovasi)
 
-Exploratory Data Analysis : Menangani Outliers
+## Data Preparation
 
+Exploratory Data Analysis : 
+- Menangani Outliers
 Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah
 
 ![image](https://user-images.githubusercontent.com/50938896/156042655-cfac108b-d244-455d-aa62-52d5a275e23d.png)
@@ -61,11 +63,25 @@ untuk menangani data outliers ini saya menggunakan solusi dengan metode IQR. dis
 
 Dapat terlihat data menjadi berkurang setelah melakukan penghapusan data outlier.
 
+- Correlation Matrix
+
 Disini saya juga memvisualisasikan Correlation Matrix untuk Menyeleksi Fitur Numerik.
 
-## Data Preparation
+![image](https://user-images.githubusercontent.com/50938896/156177747-525a0c5a-d7af-4555-a6ac-b1bc67329a70.png)
+
+Pada Correlation Matrix kita bisa melihat hubungan korelasi antar fitur. 
+
+Koefisien korelasi berkisar antara -1 dan +1. Ia mengukur kekuatan hubungan antara dua variabel serta arahnya (positif atau negatif). Mengenai kekuatan hubungan antar variabel, semakin dekat nilainya ke 1 atau -1, korelasinya semakin kuat. Sedangkan, semakin dekat nilainya ke 0, korelasinya semakin lemah.
+
+Oleh karena itu saya melakukan drop columns terhadap feature yang korelasinya lemah. Berikut adalah daftar feature yang saya drop.
+
+![image](https://user-images.githubusercontent.com/50938896/156178411-bce53fdd-b3ad-42af-abe5-0888ff7de02c.png)
+
+- Train Test Split
 
 Pada tahap ini saya membagi dataset menjadi data latih (train) dan data uji (test) dengan perbandingan 80:20.
+
+- Standarisasi
 
 Selanjutnya saya melakukan standarisasi membantu untuk membuat fitur data menjadi bentuk yang lebih mudah diolah oleh algoritma.
 
