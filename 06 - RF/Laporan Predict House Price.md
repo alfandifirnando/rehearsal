@@ -11,16 +11,21 @@ Referensi: [Machine Learning based Predicting House Prices using Regression Tech
 ## Business Understanding
 
 Problem Statements :
-1. Bagaimana melakukan prediksi harga rumah menggunakan alogoritma machine learning
-2. Bagaimana cara melakukan feature engineering atau feature selection guna memilih feature yang berpengaruh terhadap harga rumah
-3. Bagaimana teknik evaluasi untuk masalah prediksi harga rumah
+- Bagaimana melakukan prediksi harga rumah menggunakan alogoritma machine learning
+- Bagaimana cara melakukan feature engineering atau feature selection guna memilih feature yang berpengaruh terhadap harga rumah
+- Bagaimana teknik evaluasi untuk masalah prediksi harga rumah
 
 Goals :
-1. Untuk melakukan prediksi harga rumah menggunakan algoritma machine learning
-2. Untuk melakukan feature engineering pada dataset prediksi harga rumah
-3. Untuk menggunakan metrik evaluasi pada prediksi harga rumah
+- Untuk melakukan prediksi harga rumah menggunakan algoritma machine learning
+- Untuk melakukan feature engineering pada dataset prediksi harga rumah
+- Untuk menggunakan metrik evaluasi pada prediksi harga rumah
 
-Solution Statement : Hal pertama yang perlu diperhatikan ini adalah masalah regresi, jadi kita akan menggunakan algoritma regresi pada machine learning, solusinya kita bisa menggunakan algoritma regresi KNN dan Random Forest, untuk melakukan feature engineering kita bisa menggunakan teknik Exploratory Data Analysis (EDA), dan metrik evaluasi yang akan kita gunakan adalah Mean Squared Error (MSE)
+Solution Statement : 
+
+- Hal pertama yang perlu diperhatikan ini adalah masalah regresi, jadi kita akan menggunakan algoritma regresi pada machine learning
+- Menggunakan algoritma regresi seperti KNN dan Random Forest
+- Melakukan feature engineering menggunakan teknik Exploratory Data Analysis (EDA)
+- Metrik evaluasi yang akan kita gunakan adalah Mean Squared Error (MSE)
 
 ## Data Understanding
 
@@ -49,6 +54,20 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - sqftliving15 : Area ruang tamu pada tahun 2015(menyiratkan-- beberapa renovasi) Ini mungkin atau mungkin tidak memengaruhi area loteng
 - sqftlot15 : lotUkuran area pada 2015(menyiratkan-- beberapa renovasi)
 
+Data Outliers :
+
+Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah
+
+![image](https://user-images.githubusercontent.com/50938896/156042655-cfac108b-d244-455d-aa62-52d5a275e23d.png)
+
+- Correlation Matrix :
+
+Disini saya juga memvisualisasikan Correlation Matrix untuk menyeleksi feature numerik
+
+![image](https://user-images.githubusercontent.com/50938896/156177747-525a0c5a-d7af-4555-a6ac-b1bc67329a70.png)
+
+Penanganan untuk data outliers dan seleksi feature numerik berdasarkan correlation matrix akan lebih lanjut dibahas pada bagian data preparation
+
 ## Data Preparation
 
 Exploratory Data Analysis : 
@@ -61,21 +80,13 @@ Diawal saya memutuskan untuk melakukan drop columns pada kolom "id" dan "date", 
 
 - Menangani Outliers :
 
-Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti gambar dibawah
-
-![image](https://user-images.githubusercontent.com/50938896/156042655-cfac108b-d244-455d-aa62-52d5a275e23d.png)
-
-untuk menangani data outliers ini saya menggunakan solusi dengan metode IQR. disini saya akan menggunakan metode IQR untuk mengidentifikasi outlier yang berada di luar Q1 dan Q3
+Untuk menangani data outliers ini saya menggunakan solusi dengan metode IQR. disini saya akan menggunakan metode IQR untuk mengidentifikasi outlier yang berada di luar Q1 dan Q3
 
 ![image](https://user-images.githubusercontent.com/50938896/156042971-7d8319c7-e1f9-4a7e-a6d6-dabaf95a4914.png)
 
 Dapat terlihat data menjadi berkurang setelah melakukan penghapusan data outlier.
 
 - Correlation Matrix :
-
-Disini saya juga memvisualisasikan Correlation Matrix untuk Menyeleksi Fitur Numerik.
-
-![image](https://user-images.githubusercontent.com/50938896/156177747-525a0c5a-d7af-4555-a6ac-b1bc67329a70.png)
 
 Pada Correlation Matrix kita bisa melihat hubungan korelasi antar fitur. 
 
