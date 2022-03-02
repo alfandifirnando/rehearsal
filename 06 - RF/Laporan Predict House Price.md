@@ -60,11 +60,15 @@ Pada beberapa data yang saya lakukan visualisasi terdapat data outliers seperti 
 
 ![image](https://user-images.githubusercontent.com/50938896/156042655-cfac108b-d244-455d-aa62-52d5a275e23d.png)
 
+Masih banyak terdapat data outliers sehingga perlu dilakukan penghapusan untuk data tersebut
+
 - Correlation Matrix :
 
 Disini saya juga memvisualisasikan Correlation Matrix untuk menyeleksi feature numerik
 
 ![image](https://user-images.githubusercontent.com/50938896/156177747-525a0c5a-d7af-4555-a6ac-b1bc67329a70.png)
+
+Disini dapat kita lihat korelasi antar feature, ada feature yang korelasinya lemah dan kuat dengan feature target.
 
 Penanganan untuk data outliers dan seleksi feature numerik berdasarkan correlation matrix akan lebih lanjut dibahas pada bagian data preparation
 
