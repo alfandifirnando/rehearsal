@@ -116,7 +116,7 @@ Standarisasi yang saya gunakan adalah StandardScaler. StandardScaler melakukan p
 
 Perlu diperhatikan ini adalah masalah regresi, jadi saya akan menggunakan algoritma regresi pada machine learning, solusinya kita bisa menggunakan algoritma regresi seperti KNN dan Random Forest. 
 
-Pada algoritma KNN Kita menggunakan k = 10 tetangga dan metric Euclidean untuk mengukur jarak antara titik. Algoritma KNN menggunakan ‘kesamaan fitur’ untuk memprediksi nilai dari setiap data yang baru,  algoritma KNN mudah dipahami dan digunakan.
+Pada algoritma KNN Kita menggunakan k = 3 tetangga dan metric Euclidean untuk mengukur jarak antara titik. Algoritma KNN menggunakan ‘kesamaan fitur’ untuk memprediksi nilai dari setiap data yang baru,  algoritma KNN mudah dipahami dan digunakan.
 
 Pada algoritma Random Forest saya menyetel hyperparameter n_estimators=50 dan max_depth=16. Algoritma Random forest merupakan salah satu model ML yang termasuk ke dalam kategori ensemble, yaitu model prediksi yang terdiri dari beberapa model dan bekerja secara bersama-sama. Ide dibalik model ensemble adalah sekelompok model yang bekerja bersama menyelesaikan masalah. Sehingga, tingkat keberhasilan akan lebih tinggi dibanding model yang bekerja sendirian.
 
