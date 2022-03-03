@@ -133,6 +133,6 @@ Hasil evaluasi pada data latih dan data test adalah sebagai berikut :
 
 Saya juga melakukan visualiasi terhadap hasil evaluasi:
 
-![image](https://user-images.githubusercontent.com/50938896/156517618-d4e1731c-695b-4713-a42f-aacee54aaaf3.png)
+![image](https://user-images.githubusercontent.com/50938896/156518104-b9e07436-108e-4a2c-b33b-79f556d53564.png)
 
 Dari gambar di atas, terlihat bahwa, model Random Forest memberikan nilai eror yang paling kecil. Model random forest inilah yang akan kita pilih sebagai model terbaik untuk melakukan prediksi harga rumah
