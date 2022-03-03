@@ -80,13 +80,9 @@ Exploratory Data Analysis :
 
 Diawal saya memutuskan untuk melakukan drop columns pada kolom "id" dan "date", karena menurut saya kedua feature ini tidak memberi informasi yang cukup penting untuk untuk melakukan analisa regresi linear. Feature "date" atau data tanggal penjualan rumah diambil dari tahun mei 2014 sampai mei 2015 sehingga perubahan waktu ini tidak akan berdampak signifikan terhadap prediksi harga rumah.
 
-![image](https://user-images.githubusercontent.com/50938896/156179844-783b1202-23f6-4693-9440-591b10ef68c2.png)
-
 - Menangani Outliers :
 
 Untuk menangani data outliers ini saya menggunakan solusi dengan metode IQR. disini saya akan menggunakan metode IQR untuk mengidentifikasi outlier yang berada di luar Q1 dan Q3
-
-![image](https://user-images.githubusercontent.com/50938896/156042971-7d8319c7-e1f9-4a7e-a6d6-dabaf95a4914.png)
 
 Dapat terlihat data menjadi berkurang setelah melakukan penghapusan data outlier.
 
@@ -95,10 +91,7 @@ Dapat terlihat data menjadi berkurang setelah melakukan penghapusan data outlier
 Pada Correlation Matrix kita bisa melihat hubungan korelasi antar fitur. 
 
 Koefisien korelasi berkisar antara -1 dan +1. Ia mengukur kekuatan hubungan antara dua variabel serta arahnya (positif atau negatif). Mengenai kekuatan hubungan antar variabel, semakin dekat nilainya ke 1 atau -1, korelasinya semakin kuat. Sedangkan, semakin dekat nilainya ke 0, korelasinya semakin lemah.
-
-Oleh karena itu saya melakukan drop columns terhadap feature yang korelasinya lemah. Berikut adalah daftar feature yang saya drop.
-
-![image](https://user-images.githubusercontent.com/50938896/156178411-bce53fdd-b3ad-42af-abe5-0888ff7de02c.png)
+Oleh karena itu saya melakukan drop columns terhadap feature yang korelasinya lemah.
 
 - Train Test Split :
 
@@ -107,8 +100,6 @@ Pada tahap ini saya membagi dataset menjadi data latih (train) dan data uji (tes
 - Standarisasi :
 
 Selanjutnya saya melakukan standarisasi membantu untuk membuat fitur data menjadi bentuk yang lebih mudah diolah oleh algoritma.
-
-![image](https://user-images.githubusercontent.com/50938896/156043819-1ce59b06-387a-46bf-8448-c67a24757793.png)
 
 Standarisasi yang saya gunakan adalah StandardScaler. StandardScaler melakukan proses standarisasi fitur dengan mengurangkan mean (nilai rata-rata) kemudian membaginya dengan standar deviasi untuk menggeser distribusi.
 
@@ -124,12 +115,24 @@ Pada algoritma Random Forest saya menyetel hyperparameter n_estimators=50 dan ma
 
 Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau Mean Squared Error yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi.
 
+Berikkut adalah formula dari MSE 
+
+![image](https://user-images.githubusercontent.com/50938896/156517755-8f8afad0-5768-456f-badc-d9eb85cfbe25.png)
+
+dengan keterangan sebagai berikut :
+
+N = jumlah dataset
+
+yi = nilai sebenarnya
+
+y_pred = nilai prediksi
+
 Hasil evaluasi pada data latih dan data test adalah sebagai berikut :
 
 ![image](https://user-images.githubusercontent.com/50938896/156216244-082b218a-afbe-4260-98f4-f7bc2c4e1c61.png)
 
 Saya juga melakukan visualiasi terhadap hasil evaluasi:
 
-![image](https://user-images.githubusercontent.com/50938896/156216301-f5e32d8a-3c59-4605-9ea8-8634ccc49484.png)
+![image](https://user-images.githubusercontent.com/50938896/156517618-d4e1731c-695b-4713-a42f-aacee54aaaf3.png)
 
 Dari gambar di atas, terlihat bahwa, model Random Forest memberikan nilai eror yang paling kecil. Model random forest inilah yang akan kita pilih sebagai model terbaik untuk melakukan prediksi harga rumah
