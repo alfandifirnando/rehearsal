@@ -21,7 +21,7 @@ Goals :
 Solution Statement : 
 
 - Mengidentifikasi content mana yang paling berpengaruh terhadap kemiripan rekomendasi film
-- kita akan menghitung derajat kesamaan (similarity degree) antar content film dengan teknik cosine similarity
+- Menghitung derajat kesamaan (similarity degree) antar content film dengan teknik cosine similarity
 
 ## Data Understanding
 
