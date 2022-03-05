@@ -26,26 +26,36 @@ Solution Statement :
 ## Data Understanding
 
 Disini saya menggunakan dataset [Film Recommendation content_by_synopsis](https://github.com/WiraDKP/recommendation_system/tree/master/20%20-%20Recommendation%20System/data).
-Dataset berjumlah 41362 raw baris data data dan 2 variabel, setiap kolom data berisi lengkap 
+Dataset berisi informasi tentang judul film dan overview yang bersisi synopsis singkat mengenai isi film. Dataset berjumlah 41362 raw baris data data dan 2 variabel, setiap kolom data berisi lengkap tanpa adanya mising value atau anomali pada data. 
 
 Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - title : berisi judul film
 - overview : berisi synopsis/overview yaitu penjelasan terhadap film secara singkat
 
 ## Data Preparation
-- Melakukan encode terhadap keseluruhan feature overview pada dataset
-- Encode overview untuk film index ke-0 yaitu film Toy Story (Rekomendasi akan dilakukan berdasarkan film ini)
+
+- Encode Feature :
+Menyandikan (encode) feature 'overview' ke dalam indeks integer (bentuk matrix)
+
+Melakukan encode terhadap keseluruhan feature overview pada dataset dan melakukan encode overview untuk film index ke-0 yaitu film Toy Story (Rekomendasi akan dilakukan berdasarkan film ini) 
 
 ## Modeling
 
-- Pada tahap ini kita akan menghitung derajat kesamaan (similarity degree) antar content synopsis/overview film dengan teknik cosine distances
-- Memberi top 10 rekomendasi film berdasarkan kemiripan content sinopsis untuk film index ke-0
+- Pada tahap ini kita akan menghitung derajat kesamaan (similarity degree) antar content synopsis/overview dengan judul film yang sudah di encode dengan teknik cosine distances. Pada kasus ini cosine distances digunakan untuk menghitung tingkat kesamaan feature 'title' dengan 'overview'.
+- Memberi top 5 rekomendasi film berdasarkan kemiripan content sinopsis untuk film index ke-0
 
-![image](https://user-images.githubusercontent.com/50938896/156879779-c68a7faf-8842-4d4b-a63e-cfb0727363ef.png)
+![image](https://user-images.githubusercontent.com/50938896/156892694-e45f600e-e741-4e53-8761-97a474f3abb7.png)
 
-Dapat kita lihat sistem berhasil memberikan sistem rekomendasi berupa Top 10 rekomendasi film berdasarkan film Toy story yang kita inputkan, terlihat sistem memberikan rekomendasi film Toy Story 2 dan Toy Story 3
+Sistem memberikan rekomendasi film berdasarkan tingkat kesamaan antara feature overview satu judul film dengan film yang lain. Dapat kita lihat sistem berhasil memberikan sistem rekomendasi berupa Top 5 rekomendasi film berdasarkan film Toy Story yang kita inputkan, terlihat sistem memberikan rekomendasi film Toy Story 2 dan Toy Story 3
 
 
 ## Evaluation
 
-- 
+-  Metrik precision :
+Pada kasus ini metrik yang digunakan adalah metric precision, berikut formulanya :
+
+![image](https://user-images.githubusercontent.com/50938896/156893250-e5d65214-58dc-40a5-a45e-9c2181191198.png)
+
+Berdasarkan 5 item rekomendasi film yang diberikan, terdapat 2 item film memiliki tingkat kesamaan yang berkaitan satu sama lain yaitu item fil Toy Story 2 dan Toy Story 3.
+
+
