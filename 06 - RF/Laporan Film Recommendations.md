@@ -41,7 +41,7 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 
 ## Evaluation
 
-- Memberi rekomendasi untuk top 10 film berdasarkan kemiripan content sinopsis untuk film index ke-0
+- Memberi top 10 rekomendasi film berdasarkan kemiripan content sinopsis untuk film index ke-0
 
 ![image](https://user-images.githubusercontent.com/50938896/156879779-c68a7faf-8842-4d4b-a63e-cfb0727363ef.png)
 
