@@ -32,33 +32,18 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - overview : berisi synopsis/overview yaitu penjelasan terhadap film secara singkat
 
 ## Data Preparation
-
+- Melakukan encode terhadap keseluruhan feature overview pada dataset
+- Encode overview untuk film index ke-0 yaitu film Toy Story (Rekomendasi akan dilakukan berdasarkan film ini)
 
 ## Modeling
 
+- Pada tahap ini kita akan menghitung derajat kesamaan (similarity degree) antar content synopsis/overview film dengan teknik cosine distances
 
 ## Evaluation
 
-Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau Mean Squared Error yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi.
+- Memberi rekomendasi untuk top 10 film berdasarkan kemiripan content sinopsis untuk film index ke-0
 
-Berikkut adalah formula dari MSE 
+![image](https://user-images.githubusercontent.com/50938896/156879779-c68a7faf-8842-4d4b-a63e-cfb0727363ef.png)
 
-![image](https://user-images.githubusercontent.com/50938896/156517755-8f8afad0-5768-456f-badc-d9eb85cfbe25.png)
+Dapat kita lihat sistem berhasil memberikan sistem rekomendasi berupa Top 10 rekomendasi film berdasarkan film Toy story yang kita inputkan, terlihat sistem memberikan rekomendasi film Toy Story 2 dan Toy Story 3
 
-dengan keterangan sebagai berikut :
-
-N = jumlah dataset
-
-yi = nilai sebenarnya
-
-y_pred = nilai prediksi
-
-Hasil evaluasi pada data latih dan data test adalah sebagai berikut :
-
-![image](https://user-images.githubusercontent.com/50938896/156216244-082b218a-afbe-4260-98f4-f7bc2c4e1c61.png)
-
-Saya juga melakukan visualiasi terhadap hasil evaluasi:
-
-![image](https://user-images.githubusercontent.com/50938896/156518104-b9e07436-108e-4a2c-b33b-79f556d53564.png)
-
-Dari gambar di atas, terlihat bahwa, model Random Forest memberikan nilai eror yang paling kecil. Model random forest inilah yang akan kita pilih sebagai model terbaik untuk melakukan prediksi harga rumah
