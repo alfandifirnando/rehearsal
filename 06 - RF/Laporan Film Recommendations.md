@@ -58,5 +58,6 @@ Pada kasus ini metrik yang digunakan adalah metric precision, berikut formulanya
 
 Berdasarkan 5 item rekomendasi film yang diberikan, terdapat 2 item film memiliki tingkat kesamaan yang berkaitan satu sama lain yaitu item film Toy Story 2 dan Toy Story 3.
 Jadi didapatkan hasil precision = 3/5, jadi presisinya 40 %
+Jika kita perhatikan 3 rekomendasi film lainnya mengandung kata 'Andi'
 
 
