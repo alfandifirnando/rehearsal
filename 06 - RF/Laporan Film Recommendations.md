@@ -26,6 +26,7 @@ Solution Statement :
 ## Data Understanding
 
 Disini saya menggunakan dataset [Film Recommendation content_by_synopsis](https://github.com/WiraDKP/recommendation_system/tree/master/20%20-%20Recommendation%20System/data).
+Dataset berjumlah 41362 raw baris data data dan 2 variabel, setiap kolom data berisi lengkap 
 
 Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - title : berisi judul film
@@ -38,12 +39,13 @@ Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 ## Modeling
 
 - Pada tahap ini kita akan menghitung derajat kesamaan (similarity degree) antar content synopsis/overview film dengan teknik cosine distances
-
-## Evaluation
-
 - Memberi top 10 rekomendasi film berdasarkan kemiripan content sinopsis untuk film index ke-0
 
 ![image](https://user-images.githubusercontent.com/50938896/156879779-c68a7faf-8842-4d4b-a63e-cfb0727363ef.png)
 
 Dapat kita lihat sistem berhasil memberikan sistem rekomendasi berupa Top 10 rekomendasi film berdasarkan film Toy story yang kita inputkan, terlihat sistem memberikan rekomendasi film Toy Story 2 dan Toy Story 3
 
+
+## Evaluation
+
+- 
