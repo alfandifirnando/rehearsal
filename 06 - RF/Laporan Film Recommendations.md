@@ -26,7 +26,7 @@ Solution Statement :
 ## Data Understanding
 
 Disini saya menggunakan dataset [Film Recommendation content_by_synopsis](https://github.com/WiraDKP/recommendation_system/tree/master/20%20-%20Recommendation%20System/data).
-Dataset berisi informasi tentang judul film dan overview yang bersisi synopsis singkat mengenai isi film. Dataset berjumlah 41362 raw baris data data dan 2 variabel, setiap kolom data berisi lengkap tanpa adanya mising value atau anomali pada data. 
+Dataset berisi informasi tentang judul film dan overview yang berisi synopsis singkat mengenai isi film. Dataset berjumlah 41362 raw baris data data dan 2 variabel, setiap kolom data berisi lengkap tanpa adanya mising value pada data. 
 
 Variabel-variabel pada dataset tersebut adalah sebagai berikut:
 - title : berisi judul film
